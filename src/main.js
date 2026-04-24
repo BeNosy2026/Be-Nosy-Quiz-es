@@ -25,7 +25,7 @@ function trackShareClick(location) {
 }
 
 async function shareQuiz(location = 'unknown') {
-  const shareTitle = 'Be Nosy Quiz';
+  const shareTitle = 'Be Nosy Quiz (Español)';
   const shareText = `Oye — tengo un reto rápido para ti.
   La gente respira todo el día, todos los días… pero casi nadie aprende cómo hacerlo correctamente.
   Acabo de hacer este quiz de 3 minutos y aprendí cosas sorprendentemente útiles sobre cómo respiramos.
@@ -443,22 +443,22 @@ function showNnbdModal() {
     <div class="modalOverlay" id="nnbdOverlay">
       <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="nnbdTitle">
         <div class="modalHeader">
-          <div class="modalTitle" id="nnbdTitle">National Nasal Breathing Day – Early Supporter Access</div>
+          <div class="modalTitle" id="nnbdTitle">Día Nacional de la Respiración Nasal – Acceso anticipado</div>
           <button class="modalClose" id="nnbdClose" type="button">&times;</button>
         </div>
 
         <div class="modalBody">
           <p style="color:#d62828; font-weight:800; font-size:1.1rem; text-align:center; margin:0 0 12px 0;">
-            Nov 1, 2026!
+          ¡1 de noviembre de 2026!
           </p>
-          <p>Score <strong>13 or higher</strong> to <strong>be part of history</strong> as an Early Supporter of the first National Nasal Breathing Day.</p>
-          <p>People breathe all day, every day — but almost nobody learns how to do it optimally. Nasal breathing vs. mouth breathing has more benefits than you have time to read about.</p>
-          <p><strong>This 3-minute break from scrolling could change your sleep, recovery, and focus — or help someone you love.</strong></p>
-          <p><strong>Heads up:</strong> you probably won’t ace it on your first (or second) attempt.</p>
+          <p>Obtén <strong>13 o más</strong> para <strong>ser parte de la historia</strong> como uno de los primeros en apoyar el Día Nacional de la Respiración Nasal.</p>
+<p>La gente respira todo el día, todos los días — pero casi nadie aprende a hacerlo de forma óptima. La respiración nasal frente a la bucal tiene más beneficios de los que imaginas.</p>
+<p><strong>Este descanso de 3 minutos puede mejorar tu sueño, recuperación y enfoque — o ayudar a alguien que quieres.</strong></p>
+<p><strong>Importante:</strong> probablemente no obtendrás una puntuación perfecta en tu primer intento.</p>
         </div>
 
         <div class="modalFooter">
-          <button class="secondary" id="nnbdClose2" type="button">Close</button>
+          <button class="secondary" id="nnbdClose2" type="button">Cerrar</button>
         </div>
       </div>
     </div>
@@ -500,7 +500,7 @@ function renderIntro() {
         <img src="/ostrich.png" alt="Be Nosy Ostrich" class="ostrichHero">
       </div>
 
-      <p><strong>${QUIZ_LEN} questions.</strong> See how you score and Reta a un amigo.</p>
+      <p><strong>${QUIZ_LEN} questions.</strong> Mira cómo te va y reta a un amigo.</p>
 
       <div class="introActions">
         <button class="primary" id="start" type="button">Comenzar Quiz</button>
@@ -508,8 +508,8 @@ function renderIntro() {
       </div>
 
       <div class="nnbdBanner">
-        <strong>Nov 1, 2026 — NATIONAL NASAL BREATHING DAY.</strong>
-        <button class="learnMoreBtn" id="learn-more" type="button">Learn more</button>
+        <strong>1 de noviembre de 2026 — DÍA NACIONAL DE LA RESPIRACIÓN NASAL.</strong>
+        <button class="learnMoreBtn" id="learn-more" type="button">Más información</button>
       </div>
     </div>
   `;
@@ -780,9 +780,12 @@ function renderResults() {
     }, 3000);
   }
 
-  document.getElementById('share').onclick = () => {
-    shareQuiz('results');
+  const shareBtn = document.getElementById("share");
+if (shareBtn) {
+  shareBtn.onclick = () => {
+    shareQuiz("results");
   };
+}
 
   document.getElementById('restart').onclick = () => {
     gaEvent('retry_quiz', { source: 'restart' });
