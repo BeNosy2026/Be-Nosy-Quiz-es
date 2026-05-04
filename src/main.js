@@ -500,11 +500,11 @@ function renderIntro() {
         <img src="/ostrich.png" alt="Be Nosy Ostrich" class="ostrichHero">
       </div>
 
-      <p><strong>${QUIZ_LEN} questions.</strong> Mira cómo te va y reta a un amigo.</p>
+      <p><strong>${QUIZ_LEN} preguntas.</strong> Mira cómo te va y reta a un amigo.</p>
 
       <div class="introActions">
-        <button class="primary" id="start" type="button">Comenzar Quiz</button>
-        <button class="secondary shareBtn" id="share-intro" type="button">Compartir este Quiz</button>
+        <button class="primary" id="start" type="button">Comenzar Prueba</button>
+        <button class="secondary shareBtn" id="share-intro" type="button">Compartir este Prueba</button>
       </div>
 
       <div class="nnbdBanner">
@@ -712,7 +712,7 @@ function renderResults() {
 
       <div class="resultsActions">
         <button class="secondary shareBtn" id="share" type="button">Reta a un amigo</button>
-        <button class="secondary" id="restart" type="button">Reiniciar Quiz</button>
+        <button class="secondary" id="restart" type="button">Reiniciar Prueba</button>
         <hr />
       </div>
 
