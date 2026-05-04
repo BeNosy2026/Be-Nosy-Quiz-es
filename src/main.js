@@ -3,7 +3,7 @@ import './style.css';
 /** ===== BRAND CONFIG ===== */
 const brand = {
   poweredByLabel: 'Powered by Nostrich',
-  shareUrl: 'https://www.BeNosyQuiz.com',
+  shareUrl: "https://es.benosyquiz.com",
 };
 
 /** ===== QUIZ LENGTH ===== */
